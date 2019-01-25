@@ -4,4 +4,4 @@ require('@babel/register')({
         '@babel/plugin-proposal-object-rest-spread'
     ]
 });
-require('./index.js');
+require('./proxy.js');

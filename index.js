@@ -3,6 +3,7 @@ const serve = require('koa-static');
 const koaBody = require('koa-body');
 const logger = require('koa-logger');
 const { router } = require('./router');
+const config = require('./config');
 
 const app = new Koa();
 
@@ -16,7 +17,7 @@ app.use(
 app.use(logger());
 app.use(router.routes());
 
-const port = 4000;
+const port = config.port + 1;
 app.listen(port);
 
 console.log(`Mock server started: http://localhost:${port}`);

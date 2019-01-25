@@ -1,4 +1,6 @@
-exports.pagination = (data, pageNum = 1, pageSize = 20) => {
+const config = require('./config');
+
+exports.pagination = (data, pageNum = 1, pageSize = config.pageSize) => {
     if (typeof pageNum === 'string') {
         pageNum = parseInt(pageNum);
     }
